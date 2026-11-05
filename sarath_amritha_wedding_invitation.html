@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarath & Amritha | Wedding Invitation</title>
+
+<style>
+:root {
+--peach:#f8e8dc;
+--cream:#fffaf3;
+--gold:#a77a38;
+--ink:#5c4034;
+--rose:#d9a995;
+}
+
+* { box-sizing:border-box; }
+
+body {
+margin:0;
+color:var(--ink);
+font-family:Georgia,'Times New Roman',serif;
+background:radial-gradient(ellipse at top,#fffdf8 0,#f8e8dc 55%,#f3dfd1 100%);
+min-height:100vh;
+}
+
+body:before {
+content:'✧ ❀ ✧';
+position:fixed;
+inset:18px 0 auto;
+text-align:center;
+color:#bd965c;
+letter-spacing:18px;
+font-size:20px;
+pointer-events:none;
+opacity:.65;
+}
+
+nav {
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+padding:55px 12px 18px;
+}
+
+nav button {
+border:1px solid #c6a16b;
+background:#fffaf3;
+color:#785735;
+padding:10px 20px;
+border-radius:25px;
+font:15px Georgia;
+cursor:pointer;
+}
+
+nav button.active,
+nav button:hover {
+background:#a77a38;
+color:white;
+}
+
+main {
+max-width:850px;
+margin:0 auto;
+padding:12px 20px 55px;
+}
+
+.page {
+display:none;
+text-align:center;
+min-height:65vh;
+padding:34px 22px;
+background:rgba(255,250,243,.83);
+border:1px solid #d6b77f;
+outline:1px solid rgba(214,183,127,.35);
+outline-offset:6px;
+border-radius:180px 180px 18px 18px;
+box-shadow:0 12px 35px #8b62401a;
+}
+
+.page.active { display:block; }
+
+.kicker {
+color:var(--gold);
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:12px;
+}
+
+.names {
+font-size:clamp(38px,7vw,66px);
+font-weight:normal;
+color:#8b5d45;
+margin:14px 0;
+}
+
+.amp {
+color:#b28b4e;
+font-style:italic;
+}
+
+.ornament {
+color:#b28b4e;
+font-size:25px;
+margin:14px;
+}
+
+/* Slim couple photo */
+.photo-wrap {
+width:min(230px,75%);
+height:290px;
+margin:22px auto 15px;
+border:5px double #c5a16b;
+border-radius:150px 150px 12px 12px;
+padding:7px;
+background:#fff8ef;
+overflow:hidden;
+}
+
+.photo-wrap img {
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+border-radius:140px 140px 8px 8px;
+}
+
+.intro {
+font-size:18px;
+line-height:1.8;
+max-width:650px;
+margin:20px auto;
+}
+
+.section-title {
+font-size:34px;
+font-weight:normal;
+color:#8b5d45;
+margin:12px 0;
+}
+
+.detail {
+font-size:18px;
+line-height:1.8;
+margin:18px auto;
+max-width:650px;
+}
+
+.event {
+border-top:1px solid #dfc9a4;
+border-bottom:1px solid #dfc9a4;
+padding:20px 8px;
+margin:22px auto;
+max-width:620px;
+}
+
+.map {
+display:inline-block;
+color:#8b642f;
+margin:8px;
+text-underline-offset:4px;
+}
+
+.venue-btn {
+display:inline-block;
+border:0;
+background:#a77a38;
+color:white;
+padding:12px 25px;
+border-radius:25px;
+text-decoration:none;
+font:15px Georgia;
+cursor:pointer;
+margin:12px auto;
+}
+
+.venue-btn:hover {
+background:#8b642f;
+}
+
+footer {
+text-align:center;
+color:#987b60;
+font-size:13px;
+padding:10px;
+}
+
+@media(max-width:480px) {
+.page {
+border-radius:100px 100px 14px 14px;
+padding:28px 15px;
+}
+
+.photo-wrap {
+width:210px;
+height:270px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<button class="active" onclick="showPage('home',this)">Home</button>
+<button onclick="showPage('invite',this)">Invitation</button>
+<button onclick="showPage('venue',this)">Venue</button>
+</nav>
+
+<main>
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+
+<div class="kicker">With the blessings of our families</div>
+
+<div class="ornament">❀ ❧ ❀</div>
+
+<h1 class="names">
+Sarath <span class="amp">&</span> Amritha
+</h1>
+
+<div class="photo-wrap">
+<img src="img.jpeg" alt="Sarath and Amritha">
+</div>
+
+<div class="ornament">✧ ❀ ✧</div>
+
+<p class="intro">
+Together with our families, we invite you to celebrate our special day.
+</p>
+
+<button class="venue-btn"
+onclick="showPage('invite',document.querySelectorAll('nav button')[1])">
+View Invitation
+</button>
+
+</section>
+
+
+<!-- INVITATION PAGE -->
+<section id="invite" class="page">
+
+<div class="kicker">A joyful beginning</div>
+
+<div class="ornament">❀</div>
+
+<h2 class="section-title">Wedding Invitation</h2>
+
+<p class="detail">
+With the divine blessings of the Almighty and our beloved elders,
+</p>
+
+<p class="detail">
+<strong>Radhakrishnan S O & Sandhya Rani</strong><br>
+cordially invite you and your family to the wedding ceremony of their beloved son
+</p>
+
+<h2 class="names" style="font-size:clamp(30px,5vw,45px)">
+Sarath R S
+</h2>
+
+<p class="detail">with</p>
+
+<h2 class="names" style="font-size:clamp(30px,5vw,45px)">
+Amritha G
+</h2>
+
+<p class="detail">
+beloved daughter of <strong>Anil Kumar & Girijakumari</strong>.
+</p>
+
+<p class="detail">
+We request the honour of your gracious presence and blessings as the couple begins their beautiful journey of love, happiness, and togetherness. Your presence will make this auspicious occasion truly memorable.
+</p>
+
+<div class="ornament">❧ ✧ ❧</div>
+
+<!-- VENUE BUTTON -->
+<button class="venue-btn"
+onclick="showPage('venue',document.querySelectorAll('nav button')[2])">
+Venue Details
+</button>
+
+</section>
+
+
+<!-- VENUE PAGE -->
+<section id="venue" class="page">
+
+<div class="kicker">Celebrate with us</div>
+
+<div class="ornament">❀</div>
+
+<h2 class="section-title">Wedding & Reception</h2>
+
+<div class="event">
+
+<h3 class="section-title" style="font-size:27px">
+Wedding Ceremony
+</h3>
+
+<p class="detail">
+<strong>16 May 2027</strong><br>
+12:00 PM – 12:30 PM<br>
+Sreedhareeyam Convention Centre<br>
+Karunagappally
+</p>
+
+<a class="map" target="_blank" rel="noopener"
+href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwiwroGK-cOXAxUAAAAAHQAAAAAQBg..i&amp;rlz=1C1SLLM_enIN1172IN1173&amp;udm&amp;fvr=1&amp;pvq=Cg0vZy8xMWowN3I4cXJtIiEKG3NyZWV2aWR5YSBjb252ZW50aW9uIGNlbnRlchACGAM&amp;lqi=CipzcmVldmlkeWEgY29udmVudGlvbiBjZW50ZXIga2FydW5hZ2FwcGFsbHlI87XR-4CwgIAIWjgQABABEAIYARgCGAMiKnNyZWV2aWR5YSBjb252ZW50aW9uIGNlbnRlciBrYXJ1bmFnYXBwYWxseZIBEWNvbnZlbnRpb25fY2VudGVy&amp;cs=1&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=in&amp;sa=X&amp;geocode=KcHdTaWRAwY7MUlDACPCND0M&amp;daddr=behind+civil+station,+Kollam,+Karunagappalli,+Keralam+690518">
+View wedding location on Google Maps ↗
+</a>
+
+</div>
+
+
+<div class="event">
+
+<h3 class="section-title" style="font-size:27px">
+Reception
+</h3>
+
+<p class="detail">
+<strong>17 May 2027</strong><br>
+5:00 PM<br>
+Al Saj Convention Centre<br>
+Nemom
+</p>
+
+<a class="map" target="_blank" rel="noopener"
+href="https://www.google.com/maps?rlz=1C1SLLM_enIN1172IN1173&amp;gs_lcrp=EgZjaHJvbWUqDwgBEC4YJxivARjHARiOBTIGCAAQRRg5Mg8IARAuGCcYrwEYxwEYjgUyEwgCEC4YrwEYxwEYkQIYgAQYigUyEAgDEC4YkQIYsQMYgAQYigUyDQgEEAAYkQIYgAQYigUyBggFEEUYPDIGCAYQRRg8MgYIBxBFGD3SAQgyNzIxajBqNKgCALACAA&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=in&amp;sa=X&amp;geocode=KYUslfLiuwU7MYWm2Hx-A9sL&amp;daddr=Al+SAJ+CONVENTION+CENTRE,+Nemom,+Keralam+695020">
+View reception location on Google Maps ↗
+</a>
+
+</div>
+
+<p class="detail">
+Your presence and blessings mean a lot to us.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+With love · Sarath & Amritha
+</footer>
+
+<script>
+function showPage(id,btn) {
+
+document.querySelectorAll('.page').forEach(p =>
+p.classList.remove('active')
+);
+
+document.getElementById(id).classList.add('active');
+
+document.querySelectorAll('nav button').forEach(b =>
+b.classList.remove('active')
+);
+
+if(btn) btn.classList.add('active');
+
+window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
